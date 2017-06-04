@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CompoundIconTextView">
+        <attr name="cit_drawableLeft" format="integer" />
+        <attr name="cit_drawableTop" format="integer" />
+        <attr name="cit_drawableBottom" format="integer" />
+        <attr name="cit_drawableRight" format="integer" />
+        <attr name="cit_iconWidth" format="dimension" />
+        <attr name="cit_iconHeight" format="dimension" />
+        <attr name="cit_iconColor" format="color" />
+    </declare-styleable>
+</resources>
