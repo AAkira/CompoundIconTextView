@@ -17,6 +17,18 @@ An android library that is able to set a vector drawable at text view pre-Lollip
 
 ## Usage
 
+### Gradle
+
+You should set this line in your gradle file if you set colors to vector drawable pre-Lollipop.
+
+```gradle
+android {
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+    }
+}
+```
+
 ### Code
 
 ```Java
