@@ -134,6 +134,20 @@ public class CompoundIconTextView extends AppCompatTextView {
     }
 
     /**
+     * @param resourceId Set the {@link CompoundIconTextView#UNDEFINED_RESOURCE} if you want clear icon.
+     */
+    public void setVectorDrawableStart(@DrawableRes final int resourceId) {
+        setVectorDrawable(isRtl() ? INDEX_RIGHT : INDEX_LEFT, resourceId);
+    }
+
+    /**
+     * @param resourceId Set the {@link CompoundIconTextView#UNDEFINED_RESOURCE} if you want clear icon.
+     */
+    public void setVectorDrawableEnd(@DrawableRes final int resourceId) {
+        setVectorDrawable(isRtl() ? INDEX_LEFT : INDEX_RIGHT, resourceId);
+    }
+
+    /**
      * Change drawable icon color
      *
      * @param resId Set color resource id
