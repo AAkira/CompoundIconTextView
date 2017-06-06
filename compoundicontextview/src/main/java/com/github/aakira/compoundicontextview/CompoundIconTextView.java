@@ -18,9 +18,13 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.graphics.drawable.DrawableCompat;
+import android.support.v4.text.TextUtilsCompat;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.content.res.AppCompatResources;
 import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
+
+import java.util.Locale;
 
 /**
  * You can use a vector drawable in TextView instead of drawableLeft, drawableTop, drawableRight and
@@ -176,7 +180,7 @@ public class CompoundIconTextView extends AppCompatTextView {
     /**
      * Change drawable icon size
      *
-     * @param widthRes Set width resource id
+     * @param widthRes  Set width resource id
      * @param heightRes Set height resource id
      */
     public void setIconSizeResource(@DimenRes final int widthRes, @DimenRes final int heightRes) {
@@ -187,7 +191,7 @@ public class CompoundIconTextView extends AppCompatTextView {
     /**
      * Change drawable icon size
      *
-     * @param width Set width size
+     * @param width  Set width size
      * @param height Set height size
      */
     public void setIconSize(@Dimension final int width, @Dimension final int height) {
@@ -301,5 +305,13 @@ public class CompoundIconTextView extends AppCompatTextView {
         }
         // Now set the original state
         drawable.setState(originalState);
+    }
+
+    private boolean isRtl() {
+        Resources resources = getContext().getResources();
+        Locale locale = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
+                ? resources.getConfiguration().getLocales().getFirstMatch(resources.getAssets().getLocales())
+                : resources.getConfiguration().locale;
+        return TextUtilsCompat.getLayoutDirectionFromLocale(locale) == ViewCompat.LAYOUT_DIRECTION_RTL;
     }
 }
