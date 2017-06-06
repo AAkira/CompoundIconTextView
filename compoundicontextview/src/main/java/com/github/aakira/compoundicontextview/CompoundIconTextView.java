@@ -280,7 +280,7 @@ public class CompoundIconTextView extends AppCompatTextView {
      * {@link android.content.res.Resources} or a {@link android.content.res.TypedArray}.
      */
     private static void fixDrawable(@NonNull final Drawable drawable) {
-        if (Build.VERSION.SDK_INT == 21
+        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.LOLLIPOP
                 && VECTOR_DRAWABLE_CLAZZ_NAME.equals(drawable.getClass().getName())) {
             fixVectorDrawableTinting(drawable);
         }
