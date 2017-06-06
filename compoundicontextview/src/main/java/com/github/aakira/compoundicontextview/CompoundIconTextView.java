@@ -109,52 +109,28 @@ public class CompoundIconTextView extends AppCompatTextView {
      * @param resourceId Set the {@link CompoundIconTextView#UNDEFINED_RESOURCE} if you want clear icon.
      */
     public void setVectorDrawableLeft(@DrawableRes final int resourceId) {
-        if (resourceId == UNDEFINED_RESOURCE) {
-            drawables[INDEX_LEFT] = null;
-            drawableResIds[INDEX_LEFT] = UNDEFINED_RESOURCE;
-            updateIcons();
-        } else {
-            setVectorDrawable(INDEX_LEFT, resourceId);
-        }
+        setVectorDrawable(INDEX_LEFT, resourceId);
     }
 
     /**
      * @param resourceId Set the {@link CompoundIconTextView#UNDEFINED_RESOURCE} if you want clear icon.
      */
     public void setVectorDrawableTop(@DrawableRes final int resourceId) {
-        if (resourceId == UNDEFINED_RESOURCE) {
-            drawables[INDEX_TOP] = null;
-            drawableResIds[INDEX_TOP] = UNDEFINED_RESOURCE;
-            updateIcons();
-        } else {
-            setVectorDrawable(INDEX_TOP, resourceId);
-        }
+        setVectorDrawable(INDEX_TOP, resourceId);
     }
 
     /**
      * @param resourceId Set the {@link CompoundIconTextView#UNDEFINED_RESOURCE} if you want clear icon.
      */
     public void setVectorDrawableRight(@DrawableRes final int resourceId) {
-        if (resourceId == UNDEFINED_RESOURCE) {
-            drawables[INDEX_RIGHT] = null;
-            drawableResIds[INDEX_RIGHT] = UNDEFINED_RESOURCE;
-            updateIcons();
-        } else {
-            setVectorDrawable(INDEX_RIGHT, resourceId);
-        }
+        setVectorDrawable(INDEX_RIGHT, resourceId);
     }
 
     /**
      * @param resourceId Set the {@link CompoundIconTextView#UNDEFINED_RESOURCE} if you want clear icon.
      */
     public void setVectorDrawableBottom(@DrawableRes final int resourceId) {
-        if (resourceId == UNDEFINED_RESOURCE) {
-            drawables[INDEX_BOTTOM] = null;
-            drawableResIds[INDEX_BOTTOM] = UNDEFINED_RESOURCE;
-            updateIcons();
-        } else {
-            setVectorDrawable(INDEX_BOTTOM, resourceId);
-        }
+        setVectorDrawable(INDEX_BOTTOM, resourceId);
     }
 
     /**
@@ -224,10 +200,16 @@ public class CompoundIconTextView extends AppCompatTextView {
     }
 
     private void setVectorDrawable(final int index, @DrawableRes final int resourceId) {
-        checkHasIconSize();
-        setDrawable(index, resourceId);
-        drawableResIds[index] = resourceId;
-        updateIcons();
+        if (resourceId == UNDEFINED_RESOURCE) {
+            drawables[index] = null;
+            drawableResIds[index] = UNDEFINED_RESOURCE;
+            updateIcons();
+        } else {
+            checkHasIconSize();
+            setDrawable(index, resourceId);
+            drawableResIds[index] = resourceId;
+            updateIcons();
+        }
     }
 
     private void updateIcons() {
