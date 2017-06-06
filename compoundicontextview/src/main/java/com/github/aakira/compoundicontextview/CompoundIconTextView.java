@@ -84,8 +84,12 @@ public class CompoundIconTextView extends AppCompatTextView {
             drawableResIds[INDEX_TOP] = a.getResourceId(R.styleable.CompoundIconTextView_cit_drawableTop, UNDEFINED_RESOURCE);
             drawableResIds[INDEX_RIGHT] = a.getResourceId(R.styleable.CompoundIconTextView_cit_drawableRight, UNDEFINED_RESOURCE);
             drawableResIds[INDEX_BOTTOM] = a.getResourceId(R.styleable.CompoundIconTextView_cit_drawableBottom, UNDEFINED_RESOURCE);
-            drawableResIds[isRtl() ? INDEX_RIGHT : INDEX_LEFT] = a.getResourceId(R.styleable.CompoundIconTextView_cit_drawableStart, UNDEFINED_RESOURCE);
-            drawableResIds[isRtl() ? INDEX_LEFT : INDEX_RIGHT] = a.getResourceId(R.styleable.CompoundIconTextView_cit_drawableEnd, UNDEFINED_RESOURCE);
+            if (a.hasValue(R.styleable.CompoundIconTextView_cit_drawableStart)) {
+                drawableResIds[isRtl() ? INDEX_RIGHT : INDEX_LEFT] = a.getResourceId(R.styleable.CompoundIconTextView_cit_drawableStart, UNDEFINED_RESOURCE);
+            }
+            if (a.hasValue(R.styleable.CompoundIconTextView_cit_drawableEnd)) {
+                drawableResIds[isRtl() ? INDEX_LEFT : INDEX_RIGHT] = a.getResourceId(R.styleable.CompoundIconTextView_cit_drawableEnd, UNDEFINED_RESOURCE);
+            }
             iconWidth = a.getDimensionPixelSize(R.styleable.CompoundIconTextView_cit_iconWidth, UNDEFINED_RESOURCE);
             iconHeight = a.getDimensionPixelSize(R.styleable.CompoundIconTextView_cit_iconHeight, UNDEFINED_RESOURCE);
             iconColor = a.getColor(R.styleable.CompoundIconTextView_cit_iconColor, UNDEFINED_RESOURCE);
