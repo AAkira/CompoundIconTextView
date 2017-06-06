@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#eaeaea"
@@ -24,7 +25,8 @@
         app:cit_drawableRight="@drawable/ic_android_black_24dp"
         app:cit_iconColor="#fff"
         app:cit_iconHeight="4dp"
-        app:cit_iconWidth="4dp" />
+        app:cit_iconWidth="4dp"
+        tools:ignore="HardcodedText" />
 
     <com.github.aakira.compoundicontextview.CompoundIconTextView
         android:id="@+id/compoundIconTextView2"
@@ -40,7 +42,8 @@
         app:cit_drawableRight="@drawable/ic_cloud_download_black_24px"
         app:cit_iconColor="#1565C0"
         app:cit_iconHeight="@dimen/icon_size"
-        app:cit_iconWidth="@dimen/icon_size" />
+        app:cit_iconWidth="@dimen/icon_size"
+        tools:ignore="HardcodedText" />
 
     <com.github.aakira.compoundicontextview.CompoundIconTextView
         android:layout_width="wrap_content"
@@ -54,7 +57,8 @@
         app:cit_drawableRight="@drawable/ic_volume_up_black_24px"
         app:cit_iconColor="#00695C"
         app:cit_iconHeight="@dimen/icon_size"
-        app:cit_iconWidth="@dimen/icon_size" />
+        app:cit_iconWidth="@dimen/icon_size"
+        tools:ignore="HardcodedText" />
 
     <com.github.aakira.compoundicontextview.CompoundIconTextView
         android:layout_width="wrap_content"
@@ -68,7 +72,8 @@
         app:cit_drawableTop="@drawable/ic_call_end_black_24px"
         app:cit_iconColor="#558B2F"
         app:cit_iconHeight="@dimen/icon_size"
-        app:cit_iconWidth="@dimen/icon_size" />
+        app:cit_iconWidth="@dimen/icon_size"
+        tools:ignore="HardcodedText" />
 
     <com.github.aakira.compoundicontextview.CompoundIconTextView
         android:layout_width="wrap_content"
@@ -81,6 +86,21 @@
         android:textSize="@dimen/text_large"
         app:cit_drawableBottom="@drawable/ic_train_black_24px"
         app:cit_iconColor="#EF6C00"
+        app:cit_iconHeight="@dimen/icon_size"
+        app:cit_iconWidth="@dimen/icon_size"
+        tools:ignore="HardcodedText" />
+
+    <com.github.aakira.compoundicontextview.CompoundIconTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_x_large"
+        android:drawablePadding="@dimen/margin_small"
+        android:gravity="center"
+        android:text="@string/right_to_left"
+        android:textColor="#795548"
+        android:textSize="@dimen/text_large"
+        app:cit_drawableStart="@drawable/ic_language_black_24px"
+        app:cit_iconColor="#4E342E"
         app:cit_iconHeight="@dimen/icon_size"
         app:cit_iconWidth="@dimen/icon_size" />
 </LinearLayout>
