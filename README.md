@@ -79,6 +79,8 @@ tv.setVectorDrawableRight(CompoundIconTextView.UNDEFINED_RESOURCE);
 |cit_drawableTop|Sets a drawable or vector drawable to top of TextView|
 |cit_drawableBottom|Sets a drawable or vector drawable to bottom of TextView|
 |cit_drawableRight|Sets a drawable or vector drawable to right of TextView|
+|cit_drawableStart|Sets a drawable or vector drawable to start of TextView (for RTL)|
+|cit_drawableEnd|Sets a drawable or vector drawable to end of TextView (for RTL)|
 |cit_iconWidth|Sets a width of icon|
 |cit_iconHeight|Sets a width of icon|
 |cit_iconColor|Sets a icon color|
@@ -131,4 +133,4 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ```
 
-[preview]: /arts/preview.png
+[preview]: /arts/preview.jpg

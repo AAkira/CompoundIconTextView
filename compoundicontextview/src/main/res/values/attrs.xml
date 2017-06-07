@@ -5,6 +5,8 @@
         <attr name="cit_drawableTop" format="integer" />
         <attr name="cit_drawableBottom" format="integer" />
         <attr name="cit_drawableRight" format="integer" />
+        <attr name="cit_drawableStart" format="integer" />
+        <attr name="cit_drawableEnd" format="integer" />
         <attr name="cit_iconWidth" format="dimension" />
         <attr name="cit_iconHeight" format="dimension" />
         <attr name="cit_iconColor" format="color" />

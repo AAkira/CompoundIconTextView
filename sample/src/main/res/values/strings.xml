@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">CompoundIconTextView</string>
+    <string name="app_name" translatable="false">CompoundIconTextView</string>
+    <string name="right_to_left">Right to Left (in Arabic)</string>
 </resources>
