@@ -99,7 +99,7 @@ buildscript {
 }
 
 dependencies {
-	compile 'com.github.aakira:compound-text-view:1.0.0@aar'
+	compile 'com.github.aakira:compound-text-view:1.1.0@aar'
 }
 ```
 ## Using libraries
