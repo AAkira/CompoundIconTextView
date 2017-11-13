@@ -258,8 +258,10 @@ public class CompoundIconTextView extends AppCompatTextView {
         // See if we need to 'fix' the drawableLeft
         fixDrawable(drawable);
         // Set color
-        DrawableCompat.setTint(drawable, iconColor);
-        DrawableCompat.setTintMode(drawable, PorterDuff.Mode.SRC_IN);
+        if(iconColor != UNDEFINED_RESOURCE) {
+            DrawableCompat.setTint(drawable, iconColor);
+            DrawableCompat.setTintMode(drawable, PorterDuff.Mode.SRC_IN);
+        }
         // Resize Bitmap
         return new BitmapDrawable(context.getResources(),
                 Bitmap.createScaledBitmap(drawable2Bitmap(drawable, iconWidth, iconHeight), iconWidth, iconHeight, true));
