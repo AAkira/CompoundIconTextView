@@ -99,7 +99,7 @@ buildscript {
 }
 
 dependencies {
-	compile 'com.github.aakira:compound-icon-textview:1.1.0@aar'
+	compile 'com.github.aakira:compound-icon-textview:1.2.0@aar'
 }
 ```
 ## Using libraries
