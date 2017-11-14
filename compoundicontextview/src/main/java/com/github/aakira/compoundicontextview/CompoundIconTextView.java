@@ -38,7 +38,7 @@ import java.util.Locale;
  */
 public class CompoundIconTextView extends AppCompatTextView {
 
-    public static final int UNDEFINED_RESOURCE = -0x001;
+    public static final int UNDEFINED_RESOURCE = 0xABCD;
 
     private static final int INDEX_LEFT = 0;
     private static final int INDEX_TOP = 1;
